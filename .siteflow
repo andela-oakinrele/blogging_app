@@ -19,18 +19,32 @@
         "jshint" : "00000000-0000-0000-0000-000000000000"
       }
     },
+    "app\/assets\/javascripts\/posts.coffee" : {
+      "output" : "app\/assets\/javascripts\/posts.js",
+      "profiles" : {
+        "coffee" : "00000000-0000-0000-0000-000000000000",
+        "uglify" : "00000000-0000-0000-0000-000000000000",
+        "jshint" : "00000000-0000-0000-0000-000000000000"
+      }
+    },
     "app\/assets\/javascripts\/cable.js" : {
       "output" : "app\/assets\/javascripts\/cable.out.js",
       "profiles" : {
         "uglify" : "00000000-0000-0000-0000-000000000000",
         "jshint" : "00000000-0000-0000-0000-000000000000"
       }
+    },
+    "app\/assets\/stylesheets\/posts.scss" : {
+      "output" : "app\/assets\/stylesheets\/posts.css",
+      "profiles" : {
+        "sass" : "00000000-0000-0000-0000-000000000000"
+      }
     }
   },
   "flows" : {
     "stylus" : {
-      "output" : "*.css",
-      "stylus" : "00000000-0000-0000-0000-000000000000"
+      "stylus" : "00000000-0000-0000-0000-000000000000",
+      "output" : "*.css"
     },
     "sass" : {
       "sass" : "00000000-0000-0000-0000-000000000000",
@@ -54,9 +68,9 @@
       "output" : "*.out.css"
     },
     "js" : {
-      "output" : "*.out.js",
+      "jshint" : "00000000-0000-0000-0000-000000000000",
       "uglify" : "00000000-0000-0000-0000-000000000000",
-      "jshint" : "00000000-0000-0000-0000-000000000000"
+      "output" : "*.out.js"
     }
   },
   "profiles" : {
@@ -66,6 +80,12 @@
         "name" : "Default Stylus Profile",
         "comments" : false,
         "format" : 1
+      }
+    },
+    "coffee" : {
+      "00000000-0000-0000-0000-000000000000" : {
+        "name" : "Default CoffeeScript Profile",
+        "bare" : false
       }
     },
     "sass" : {
@@ -93,12 +113,6 @@
           "jquery"
         ],
         "globals" : ""
-      }
-    },
-    "coffee" : {
-      "00000000-0000-0000-0000-000000000000" : {
-        "name" : "Default CoffeeScript Profile",
-        "bare" : false
       }
     },
     "less" : {
