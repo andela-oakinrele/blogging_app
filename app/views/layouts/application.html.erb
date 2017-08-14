@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Akinrele Simisola -Software Developer</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Blog</title>
     <%= csrf_meta_tags %>
 
@@ -9,6 +12,15 @@
   </head>
 
   <body>
+    <header id="main_navigation" class="clearfix">
+      <a href="#" class="name">Akinrele Simisola</a>
+      <nav>
+        <%= link_to "Articles", posts_path %>
+        <a href="articles.html">Articles</a>
+        <a href="#">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
