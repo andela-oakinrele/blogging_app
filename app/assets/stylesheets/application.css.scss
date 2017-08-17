@@ -95,9 +95,18 @@ hr {
 }
 
 #main_navigation {
-  padding: 2.5em 5%;
   border-bottom: 1px solid $border;
+
+  &.welcome-index {
+    nav {
+      a {
+        color: $white;
+      }
+    }
+  }
+
   .name {
+    padding: 2.5em 5%;
     font-weight: 700;
     font-size: .8em;
     letter-spacing: 4px;
@@ -109,8 +118,12 @@ hr {
     float: left;
   }
   nav {
-    float: right;
-    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    .logo_wrapeper {
+      flex-grow: 1;
+    }
     a {
       color: $dark;
       text-decoration: none;
@@ -191,6 +204,31 @@ input[type="submit"], button {
 .button_wrapper {
   margin: 4em 0 0 0;
   text-align: center;
+}
+
+.me {
+  background-image: linear-gradient(rgba(0,15,25,.3), rgba(0,15,25,1)), url('../assets/images/simmy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  color: #fff;
+  background-position: 0;
+  padding-top: 25px;
+  margin-top: -6%;
+  .title {
+
+    margin-left: 2em;
+    margin-top: 10em;
+
+    * {
+      color: $white;
+    }
+
+    h1 {
+      font-size: 4em;
+      text-transform: uppercase;
+    }
+  }
 }
 
 @import 'welcome';

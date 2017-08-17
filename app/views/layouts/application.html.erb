@@ -33,9 +33,12 @@
   </head>
 
   <body>
-    <header id="main_navigation" class="clearfix">
-    <%= link_to "Akinrele Simisola", root_path, class: "name" %>
+    <header id="main_navigation" class="clearfix <%= params[:controller] %>-<%= params[:action] %>">
+
       <nav>
+        <div class="logo_wrapeper">
+          <%= link_to "Akinrele Simisola", root_path, class: "name" %>
+        </div>
         <%= link_to "Articles", posts_path %>
         <%= link_to "Projects", projects_path %>
         <%= link_to "Contact", new_contact_path %>
@@ -43,6 +46,7 @@
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
         <% end %>
       </nav>
+      <%= render 'partials/bg_picture' if url_for == '/' %>
     </header>
 
     <% if notice %>
