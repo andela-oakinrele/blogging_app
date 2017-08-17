@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @projects = Project.all.order("created_at desc")
+    @projects = Project.all.order("created_at desc").paginate(page: params[:page], per_page: 2)
   end
 
   def new
@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to @project, notice: "Project successfully saved"
     else
-      render 'new'
+      render 'new', notice: "Something went wrong"
     end
   end
 
@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
     if @project.update project_params
       redirect_to @project, notice: "Update successfully"
     else
-      render 'edit'
+      render 'edit', notice: "Something went wrong"
     end
   end
 

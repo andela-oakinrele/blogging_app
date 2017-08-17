@@ -178,11 +178,15 @@ input[type="submit"], button {
   }
 }
 
-.project_button {
+.project_button, .add_button  {
   background: $highlight;
   color: $white;
   text-decoration: none;
   padding: 1em 2em;
+}
+
+.add_button {
+  position: absolute;
 }
 .button_wrapper {
   margin: 4em 0 0 0;

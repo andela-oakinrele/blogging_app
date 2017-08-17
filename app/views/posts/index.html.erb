@@ -1,4 +1,7 @@
   <h1 id="page_title">Stuff I've written</h1>
+  <% if  user_signed_in? %>
+    <%= link_to "Add New Post", new_post_path, class: 'add_button' %>
+  <% end %>
   <div id="posts_wrapper" class="skinny_wrapper">
     <% @posts.each do |post| %>
       <div class="post">

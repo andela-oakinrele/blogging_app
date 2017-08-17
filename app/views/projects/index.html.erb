@@ -1,4 +1,7 @@
   <h1 id="page_title">Stuff I've Built</h1>
+  <% if  user_signed_in? %>
+    <%= link_to "Add New Project", new_project_path, class: 'add_button' %>
+  <% end %>
   <div id="posts_wrapper" class="skinny_wrapper">
     <% @projects.each do |project| %>
       <div class="post">
@@ -8,3 +11,4 @@
     </div>
     <% end %>
   </div>
+  <%= will_paginate @projects %>
