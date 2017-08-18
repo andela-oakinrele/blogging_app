@@ -207,18 +207,18 @@ input[type="submit"], button {
 }
 
 .me {
-  background-image: linear-gradient(rgba(0,15,25,.3), rgba(0,15,25,1)), url('../assets/images/simmy.jpg');
+  background-image: linear-gradient(rgba(0,15,25,.3), rgba(0,15,25,1)), url('../assets/images/me.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 36em;
   color: #fff;
-  background-position: 0;
-  padding-top: 25px;
-  margin-top: -6%;
+  background-position: center;
+  padding-top: 1em;
+  margin-top: -5em;
   .title {
 
     margin-left: 2em;
-    margin-top: 10em;
+    margin-top: 13em;
 
     * {
       color: $white;
